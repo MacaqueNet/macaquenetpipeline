@@ -1,0 +1,4 @@
+unit_code,subject,sex,age,age_cat,is_adult,partner_only,obseff_samples,obseff_samples_2,obseff_duration,obseff_duration_2
+nigra_noether_g1_1996_1,andre,m,NA,adult,1,0,NA,NA,6,NA
+nigra_noether_g1_1996_1,bart,m,NA,old adult,1,0,NA,NA,6,NA
+nigra_noether_g1_1996_1,cecile,f,NA,adult,1,0,NA,NA,7,NA
