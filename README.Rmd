@@ -1,0 +1,79 @@
+---
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# MacaqueNet data processing pipeline
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+This repository contains the infrastructure to import, process, clean and check the data that end up in the MacaqueNet database. 
+It also includes a set of made-up data sets to illustrate the workflow.
+
+In order to recreate the workflow we use(d) during the building of the database you need to clone this repository, i.e. we work with a local version of all the files in this repository. 
+Simply *installing* the package won't suffice. 
+We highly recommend to use RStudio in combination with the `devtools` package.
+[Below](#setup) we provide a short description for setting up your system.
+In brief: download and unpack the zipped version of this repository. 
+Then create an RStudio project with the content of this folder.
+If you are familiar with `git` and `GitHub` you can also directly create a local copy of the repository via RStudio's `New project...` menu option where we need to provide the URL to the GitHub repository.
+
+The general workflow with this setup is the following for adding a new data set:
+
+- add new raw data to the `data-raw/original_data_files/` 
+
+- fill the file `inst/extdata/_datakey.csv` with necessary information
+
+- edit the `R/read_subject_data.R` function
+
+- edit the `R/read_interaction_data.R` and `R/cleaning.R` functions
+
+- run tests on new data
+
+- build all data files (create standardized csv files of all data files) into the `inst/extdata` folder
+
+- run tests across all data
+
+- install the package
+
+
+
+
+
+```{r, eval=FALSE}
+library(macaquenetpipeline)
+key <- get_key(ready_to_deploy_only = TRUE)
+build_all(key = key, ready_to_deploy_only = TRUE, silent = TRUE, scramble = FALSE)
+match_subjects_interactions(key = key)
+export_project_data(output_folder = tempdir())
+```
+
+
+
+# setup
+
+We recommend using a recent version of RStudio.
+Within RStudio, we also recommend using the *project* feature.
+The main reason for using this setup is that it keeps track of working directories and also allows for an easy integration of version control via `git` and `GitHub`.
+
+
+```{r, eval=FALSE}
+devtools::has_devel()
+```
+
+If this returns `Your system is ready to build packages!`, you are good to go.
+

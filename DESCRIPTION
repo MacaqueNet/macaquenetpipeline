@@ -1,0 +1,23 @@
+Package: macaquenetpipeline
+Type: Package
+Title: Import, processing and cleaning of interaction data
+Version: 2023.9.12
+Authors@R: 
+    person(given = "Christof",
+           family = "Neumann",
+           role = c("aut", "cre"),
+           email = "christofneumann1@gmail.com")
+Description: Illustrates the data processing pipeline. 
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.3
+Depends:
+  devtools
+Imports:
+  readxl,
+  gtools,
+  crayon
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

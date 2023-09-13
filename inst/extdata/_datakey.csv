@@ -1,0 +1,11 @@
+ready_to_deploy,crucial_issue_remaining,running_number,species,source,group_name,group_name_verified,year,within_year_period,unit_code,folder,file,sep,sheet,sheetrange,focal_data,cat_global,cat_sub,cat_detail,sampling_method,data_type,interval,interval_2,corrected_obseff,has_obseff,sum_dyad_obseff,obseff_column,data_symmetric,required_transposing,notes
+1,0,1001,mulatta,hilbert,g1,1,2012,1,mulatta_hilbert_g1_2012_1,mulatta_hilbert,example1.xlsx,excel,ids,A1:D7,NA,subjectdata,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+1,0,1002,mulatta,hilbert,g1,1,2012,1,mulatta_hilbert_g1_2012_1,mulatta_hilbert,example1.xlsx,excel,grooming,A1:G7,1,affi,groom,NA,continuous,count,NA,NA,0,1,1,obseff_duration,0,0,
+1,0,1003,mulatta,hilbert,g1,1,2012,1,mulatta_hilbert_g1_2012_1,mulatta_hilbert,example1.xlsx,excel,agg-contact,A1:C3,1,aggr,conagg,NA,continuous,count,NA,NA,0,1,1,obseff_duration,0,0,
+1,0,1004,mulatta,hilbert,g1,1,2012,1,mulatta_hilbert_g1_2012_1,mulatta_hilbert,example1.xlsx,excel,agg-noncontact,A1:F7,1,aggr,nonconagg,NA,continuous,count,NA,NA,0,1,1,obseff_duration,0,0,
+1,0,1101,nigra,noether,g1,1,1996,1,nigra_noether_g1_1996_1,nigra_noether,subjects.csv,semicolon,NA,NA,NA,subjectdata,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+1,0,1102,nigra,noether,g1,1,1996,1,nigra_noether_g1_1996_1,nigra_noether,grooming.csv,semicolon,NA,NA,1,affi,groom,NA,continuous,duration,NA,NA,0,1,1,obseff_duration,0,0,
+1,0,1103,nigra,noether,g1,1,1996,1,nigra_noether_g1_1996_1,nigra_noether,aggression.csv,semicolon,NA,NA,1,aggr,conagg,NA,continuous,count,NA,NA,0,1,1,obseff_duration,0,0,
+1,0,1201,sylvanus,delbruck,v,1,2003,1,sylvanus_delbruck_V_2003_1,sylvanus_delbruck,example3.xlsx,excel,subjects,A1:C8,NA,subjectdata,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,
+1,0,1202,sylvanus,delbruck,v,1,2003,1,sylvanus_delbruck_V_2003_1,sylvanus_delbruck,example3.xlsx,excel,Grooming,A1:H8,1,affi,groom,NA,continuous,count,NA,NA,0,1,1,obseff_duration,0,0,
+1,0,1203,sylvanus,delbruck,v,1,2003,1,sylvanus_delbruck_V_2003_1,sylvanus_delbruck,example3.xlsx,excel,Contact aggression,A1:H8,1,aggr,conagg,NA,continuous,count,NA,NA,0,1,1,obseff_duration,0,0,

@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+data-raw/original_data_files/nigra_noether/example2.xlsx
