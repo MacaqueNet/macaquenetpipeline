@@ -4,7 +4,12 @@
 \alias{get_key}
 \title{read the key file to all data sets}
 \usage{
-get_key(read = TRUE, ready_to_deploy_only = FALSE)
+get_key(
+  read = TRUE,
+  ready_to_deploy_only = FALSE,
+  include_subject_data = TRUE,
+  include_interaction_data = TRUE
+)
 }
 \arguments{
 \item{read}{logical, should the columns for processing the raw files be
@@ -13,6 +18,12 @@ included (\code{TRUE} by default)}
 \item{ready_to_deploy_only}{logical, only return data sets that are marked
 as ready for deployment in key file. Default is \code{FALSE}, i.e.,
 use all rows irrespective of their status.}
+
+\item{include_subject_data}{logical, include lines with subject data (
+default is \code{TRUE})}
+
+\item{include_interaction_data}{logical, include lines with interaction
+data (default is \code{TRUE})}
 }
 \value{
 a data.frame with the data sets (to be) included in the package

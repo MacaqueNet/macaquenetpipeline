@@ -5,6 +5,11 @@
 #' @param ready_to_deploy_only logical, only return data sets that are marked
 #'        as ready for deployment in key file. Default is \code{FALSE}, i.e.,
 #'        use all rows irrespective of their status.
+#' @param include_subject_data logical, include lines with subject data (
+#'                             default is \code{TRUE})
+#' @param include_interaction_data logical, include lines with interaction
+#'                                 data (default is \code{TRUE})
+#'
 #' @return a data.frame with the data sets (to be) included in the package
 #' @importFrom tools file_path_sans_ext
 #' @export
@@ -17,7 +22,11 @@
 #' key <- get_key(read = FALSE)
 #' colnames(key)
 
-get_key <- function(read = TRUE, ready_to_deploy_only = FALSE) {
+get_key <- function(read = TRUE,
+                    ready_to_deploy_only = FALSE,
+                    include_subject_data = TRUE,
+                    include_interaction_data = TRUE
+                    ) {
   res <- read.csv(system.file("extdata/_datakey.csv",
                               package = "macaquenetpipeline"),
                   stringsAsFactors = FALSE)
@@ -61,5 +70,9 @@ get_key <- function(read = TRUE, ready_to_deploy_only = FALSE) {
     res$sheet <- NULL
     res$sheetrange <- NULL
   }
+
+  if (!include_subject_data) res <- res[res$cat_global != "subjectdata", ]
+  if (!include_interaction_data) res <- res[!res$cat_global %in% c("affi", "aggr"), ]
+
   res
 }
