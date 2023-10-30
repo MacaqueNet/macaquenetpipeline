@@ -3,11 +3,15 @@ Type: Package
 Title: Import, processing and cleaning of interaction data
 Version: 2023.9.12
 Authors@R: 
-    person(given = "Christof",
+    c(person(given = "Christof",
            family = "Neumann",
            role = c("aut", "cre"),
-           email = "christofneumann1@gmail.com")
-Description: Illustrates the data processing pipeline. 
+           email = "christofneumann1@gmail.com"),
+    person(given = "Delphine",
+           family = "De Moor",
+           role = c("aut"),
+           email = "delphinedemoor@gmail.com"))
+Description: Illustrates the MacaqeuNet data processing pipeline. 
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
